@@ -1005,6 +1005,7 @@ class git(object):
 			Log.Debug('***** Got the following from github *****')
 			Log.Debug(response)
 			req.clear()
+			req.set_header('Content-Type', 'application/json; charset=utf-8')
 			req.set_status(200)
 			req.finish(response)
 			Log.Debug('Ending getReleaseInfo')
